@@ -6,8 +6,7 @@ RUN groupadd -r librarian && useradd -r -g librarian librarian
 
 COPY settings.json /var/lib/transmission-daemon/info/settings.json
 
-RUN add-apt-repository -y ppa:transmissionbt/ppa && \
-    apt-get -q update && \
+RUN apt-get -q update && \
     apt-get install -qy --force-yes transmission-daemon ca-certificates wget tar curl unrar-free procps && \
     apt-get -y autoremove && \
     apt-get -y clean && \
