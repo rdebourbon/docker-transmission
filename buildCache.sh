@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker build --rm -t timhaak/transmission .
+docker build --rm -t rdebourbon/transmission .
